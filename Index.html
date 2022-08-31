@@ -10,32 +10,46 @@
   </head>
   <body>
     <header><img class="logo" src="./imagenes/Logo.png" alt="" /></header>
+
     <main>
       <section class="flex-container">
-        <div class="encriptar">
-          <label for="ingresar">
-            <div class="input">
-              <input type="text" name="ingresar" id="ingresar" />
+        <div class="contenedor-inputs">
+          <label class="label-text" for="texto">
+            <div class="div-input-text">
+              <input class="input-text" type="text" id="texto" value="Ingrese el texto aqui" />
             </div>
           </label>
-          <label class="importante"
-            ><img src="./imagenes/Vector.png" alt="Importante" /> &nbsp Solo letras minúsculas y sin acentos
-          </label>
-          <div class="buttonInput">
-            <button>Encriptar</button>
-            <button>Desencriptar</button>
+          <div class="div-input-button">
+            <div class="importante">
+              <img src="./imagenes/Vector.png" alt="Importante" />
+              <input class="texto-importante" type="text" value="Solo letras minusculas y sin acentos" disabled />
+            </div>
+            <div class="button-input">
+              <button class="encriptar">Encriptar</button>
+              <button class="desencriptar">Desencriptar</button>
+            </div>
           </div>
         </div>
-        <div class="mensaje">
-          <div>
-            <textarea name="mensaje" id="mensaje" cols="60" rows="10"></textarea>
-          </div>
-          <div>
-            <button>Copiar</button>
+
+        <div class="contenedor-outputs">
+          <label for="texto">
+            <div class="muneco-on">
+              <img class="muneco" src="./imagenes/Muñeco.png" alt="Buscando Encriptado" />
+              <label for="texto" class="output-text1" type="text">Ningun mensaje Fue Encontrado </label>
+
+              <label class="output-text2" type="text"> Ingresa el texto que desees encriptar o desencriptar </label>
+            </div>
+          </label>
+          <div class="copiartexto">
+            <textarea class="textarea"></textarea>
+            <div class="copiar">
+              <button class="btncopiar">Copiar</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer></footer>
+    <script src="./app.js"></script>
   </body>
 </html>

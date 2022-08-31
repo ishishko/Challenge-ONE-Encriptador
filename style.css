@@ -1,5 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+
 body {
-  background: purple;
+  background-color: #e5e5e5;
   width: 1440px;
   height: 1024px;
 }
@@ -12,83 +19,166 @@ body {
 .flex-container {
   display: flex;
   position: absolute;
-  background-color: antiquewhite;
   width: 90%;
   height: 100%;
   top: 40px;
   right: 40px;
 }
 
-.input input {
-  margin-top: 70px;
-  margin-left: 15%;
-  border: none;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 150%;
-}
-
-.encriptar {
-  background-color: lightcoral;
+.contenedor-inputs {
   width: 66%;
+  height: 100%;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
 }
 
-.input {
+.div-input-text {
   width: 100%;
-  height: 80%;
-  left: 240px;
-  top: 168px;
-  font-family: "Inter";
+  height: 75%;
+}
+
+.input-text {
+  position: absolute;
+  width: 577px;
+  height: 48px;
+  left: 14%;
+  top: 18%;
+  font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
+  color: #0a3871;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
-.buttonInput {
-  height: auto;
-  text-align: center;
-  background-color: lightskyblue;
+.div-input-button {
+  width: 100%;
+  height: 25%;
 }
 
 .importante {
-  position: relative;
+  position: absolute;
   display: flex;
-  top: 50px;
-  left: 17%;
-  height: 17px;
-  width: 250px;
-  border: none;
-  align-items: center;
-  font-family: "Arial";
-  font-style: normal;
-  font-size: 13px;
+  margin: 4% 0 0 10.5%;
+  justify-content: center;
+  vertical-align: middle;
+  font-family: Arial;
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-.buttonInput button:first-child {
-  margin: 55px 0;
+.texto-importante {
+  width: 220px;
+  background-color: transparent;
+  border: none;
+}
+.button-input {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.encriptar {
+  margin-right: 1%;
   padding: 24px;
   gap: 8px;
   width: 328px;
   height: 67px;
   background: #0a3871;
-  color: whitesmoke;
   border-radius: 24px;
-  border: 1px solid #0a3871;
+  color: white;
+  border: none;
 }
 
-.buttonInput button:last-child {
-  margin: auto;
+.desencriptar,
+.btncopiar {
+  margin-left: 1%;
   padding: 24px;
   gap: 8px;
   width: 328px;
   height: 67px;
   border-radius: 24px;
-  border: 1px solid #0a3871;
+  background: #d8dfe8;
   color: #0a3871;
+  border: none;
 }
 
-.mensaje {
+/*-----------------------------Outputs Muneco------------------------*/
+
+.contenedor-outputs {
+  width: 34%;
+  height: 100%;
+  border-radius: 32px;
+  background: white;
+}
+
+.muneco-on {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.muneco {
+  max-width: 304px;
+  max-height: 336px;
+}
+
+.output-text1 {
+  width: 336px;
+  height: 58px;
+  text-align: center;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.output-text2 {
+  width: 336px;
+  height: 48px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495057;
+}
+
+/*-----------------------------Outputs textarea------------------------*/
+
+.copiartexto {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  /* border: 1px black solid; */
+  justify-content: center;
+  align-items: center;
+}
+
+.textarea {
+  width: 100%;
+  height: 75%;
+  padding: 32px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.copiar {
+  height: 25%;
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
 }
