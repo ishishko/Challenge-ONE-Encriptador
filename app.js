@@ -1,23 +1,51 @@
 const inputTexto = document.querySelector(".input-text");
+const textarea = document.querySelector(".textarea");
 const btnEncriptar = document.querySelector(".encriptar");
 const btnDesencriptar = document.querySelector(".desencriptar");
+const muneco = document.querySelector(".muneco-on");
+const copiartexto = document.querySelector(".copiartexto");
 const btncopiar = document.querySelector(".btncopiar");
+const letra = ["e", "i", "a", "o", "u"];
+const codigo = ["enter", "imes", "ai", "ober", "ufat"];
+let textocod = "";
 
 btnEncriptar.addEventListener("click", () => {
-  console.log("Cliqueado");
+  textocod = encriptar(inputTexto.value);
+  enviar(textocod);
+  console.log(textocod);
+});
+
+btnDesencriptar.addEventListener("click", () => {
+  textocod = desencriptar(inputTexto.value);
+  enviar(textocod);
+  console.log(textocod);
 });
 
 function encriptar(texto) {
-  let letra = ["e", "e", "a", "o", "u"];
-  let codigo = ["enter", "imes", "ai", "ober", "ufat"];
-  texto = texto.toLowercase();
-
+  texto = texto.toLowerCase();
   for (let i = 0; i < letra.length; i++) {
     if (texto.includes(letra[i])) {
-      texto = texto.replaceall(letra[i], codigo[i]);
+      texto = texto.replaceAll(letra[i], codigo[i]);
     }
   }
   return texto;
 }
 
-// btnEncriptar.onclick(console.log("apretado"));
+function desencriptar(texto) {
+  texto = texto.toLowerCase();
+  for (let i = 0; i < codigo.length; i++) {
+    if (texto.includes(codigo[i])) {
+      texto = texto.replaceAll(codigo[i], letra[i]);
+    }
+  }
+  return texto;
+}
+
+function enviar(texto) {
+  console.log(texto);
+  if (texto != "") {
+    textarea.value = texto;
+    muneco.style.display = "none";
+    copiartexto.style.display = "flex";
+  }
+}
