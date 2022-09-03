@@ -50,12 +50,22 @@ function desencriptar(texto) {
 //---------------Functions Actions-----------------------
 function enviar(texto) {
   console.log(texto);
+
   if (texto != "") {
     textarea.value = texto;
     muneco.style.display = "none";
     copiartexto.style.display = "flex";
     inputTexto.value = "";
-    inputTexto.placeholder = "Ingrese aqui su texto";
+  } else {
+    let nsombra = 0;
+    inputTexto.style.boxShadow = "0 0 20px #0a3871";
+    setTimeout(sombra, 60);
+    let intersombra = setInterval(() => {
+      setTimeout(sombra, 60);
+      inputTexto.style.boxShadow = "0 0 20px #0a3871";
+      nsombra == 1 ? clearInterval(intersombra) : nsombra++;
+      console.log(nsombra);
+    }, 120);
   }
 }
 
@@ -64,4 +74,8 @@ function copiar() {
   muneco.style.display = "flex";
   copiartexto.style.display = "none";
   console.log(navigator.clipboard.readText);
+}
+
+function sombra() {
+  inputTexto.style.boxShadow = "";
 }

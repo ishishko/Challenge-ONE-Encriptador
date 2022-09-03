@@ -1,8 +1,9 @@
-html {
-  box-sizing: border-box;
-}
 * {
   box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
@@ -41,7 +42,7 @@ body {
   position: absolute;
   width: 577px;
   max-width: 35%;
-  height: 48px;
+  height: 100%px;
   left: 14%;
   top: 18%;
   font-family: "Arial";
@@ -50,8 +51,9 @@ body {
   font-size: 32px;
   line-height: 150%;
   color: #0a3871;
-  border: none;
+  word-break: break-word;
   background-color: transparent;
+  border: none;
   outline: none;
 }
 
@@ -182,4 +184,10 @@ body {
   display: flex;
   vertical-align: middle;
   align-items: center;
+}
+
+/*--------------------------------------------------------------*/
+
+.input-text::placeholder {
+  color: #0a3871;
 }
