@@ -13,13 +13,11 @@ let textocod = "";
 btnEncriptar.addEventListener("click", () => {
   textocod = encriptar(inputTexto.value);
   enviar(textocod);
-  //console.log(textocod);
 });
 
 btnDesencriptar.addEventListener("click", () => {
   textocod = desencriptar(inputTexto.value);
   enviar(textocod);
-  //console.log(textocod);
 });
 
 btncopiar.addEventListener("click", () => {
